@@ -1,0 +1,11 @@
+mpld3
+numpy
+shap
+joblib
+pandas
+matplotlib
+scikit-learn
+seaborn
+xgboost
+flask
+flask-cors
