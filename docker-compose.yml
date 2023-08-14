@@ -5,21 +5,11 @@ services:
       context: ./datasci-ui
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    environment:
-      - FLASK_API_PATH="http://backend:8080"
-    networks:
-      - app-network
+      - "80:80"
 
-  # backend:
-  #   build:
-  #     context: ./backend
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8080:8080"
-  #   networks:
-  #     - app-network
-
-networks:
-  app-network:
-    driver: bridge
+  backend:
+    build:
+      context: ./datasci-app
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
